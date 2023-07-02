@@ -26,7 +26,7 @@ namespace SuperHeroAPI.Controllers
         {
             var hero = _superHeroService.GetSingleHero(id);
             if (hero is null)
-                return NotFound("Sorry, this hero doesn't exists.");
+                return NotFound("Sorry, this super hero doesn't exists.");
 
             return Ok(hero);
         }
@@ -43,7 +43,7 @@ namespace SuperHeroAPI.Controllers
         {
             var hero = _superHeroService.UpdateHero(id, request);
             if (hero is null)
-                return NotFound("Sorry, this hero doesn't exists.");
+                return NotFound("Sorry, this super hero doesn't exists.");
 
             return Ok(hero);
         }
@@ -53,7 +53,7 @@ namespace SuperHeroAPI.Controllers
         {
             var hero = _superHeroService.DeleteHero(id);
             if (hero is null)
-                return NotFound("Sorry, this hero doesn't exists.");
+                return NotFound("Sorry, this super hero doesn't exists.");
 
             return Ok(hero);
         }
